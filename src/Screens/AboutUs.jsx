@@ -83,7 +83,7 @@ const AboutUs = () => {
         </div>
       </div>
       <div data-aos="fade-up"
-     data-aos-duration="3000" className="bg-secondary flex flex-col md:flex-row mx-12 md:mx-32 justify-around px-10 py-5 md:px-32 md:py-20">
+     data-aos-duration="3000" className="bg-secondary flex flex-col md:flex-row mx-3 md:mx-32 justify-around px-10 py-5 md:px-32 md:py-20">
         <div className="text-center md:text-start">
           <p className="text-2xl md:text-4xl font-extrabold text-onPrimary pb-2">
             Need a{" "}
@@ -100,7 +100,7 @@ const AboutUs = () => {
         </div>
 
         <div className="flex flex-col  text-center md:text-start mt-2 justify-center items-center gap-1">
-          <div className=" flex items-center justify-center gap-4 md:text-xl font-bold w-fit md:w-[300px] md:h-16 rounded-full px-8 py-4 cursor-pointer bg-onPrimary hover:text-onPrimary hover:bg-gradient-to-r hover:from-[#9023B5] hover:to-[#DE5235] text-secondary">
+          <div className=" flex items-center justify-center gap-2 md:gap-4 text-base md:text-xl font-bold w-fit md:w-[300px]  md:h-16 rounded-full px-8 py-4 cursor-pointer bg-onPrimary hover:text-onPrimary hover:bg-gradient-to-r hover:from-[#9023B5] hover:to-[#DE5235] text-secondary">
             <i className="fa-solid fa-microphone text-orange-600"></i> Book a
             Session
           </div>
