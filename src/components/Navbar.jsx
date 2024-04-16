@@ -1,11 +1,11 @@
 import { useState } from 'react'
 import logo from '../assets/logoIdeal.svg'
 import Button from './Button'
-import { NavLink } from 'react-router-dom'
+// import { NavLink } from 'react-router-dom'
 
 const Navbar = () => {
   const [isOpen , setIsOpen] = useState(false)
-  const NavLinks = ["home", 'about us ' , 'projects',  'contact us']
+  const NavTab = [{title: "home", link:'#home'}, {title: "about us", link:'#aboutus'} , {title: "services", link:'#services'}]
   
   const HandleOpen = () => {
     console.log('click')
@@ -21,9 +21,12 @@ const Navbar = () => {
       </div>
       <div className='flex gap-8 text-onPrimary font-semibold   capitalize'>
           {
-            NavLinks.map((item,ind )=>(
-            <p key={ind}  className='hover:text-primary   cursor-pointer' >
-              {item}
+            NavTab.map((item,ind )=>(
+              <p key={ind}  className='hover:text-primary   cursor-pointer' >
+              <a href={item.link}>
+
+              {item.title}
+                </a>
                 </p>
             ))
           }
@@ -47,10 +50,10 @@ const Navbar = () => {
              <div className={`${isOpen ? "top-0 duration-300" : "top-[-1000%] duration-1000"} pt-8 absolute p-4 flex justify-between  z-20 w-full bg-white h-auto`}>
                 <div className='flex gap-6 flex-col '>
 
-                {NavLinks.map((item,index)=>(
+                {NavTab.map((item,index)=>(
                   <div key={index} className='flex flex-col gap-8'>
                     <p className='capitalize '>
-                      {item}
+                      {item.title}
                     </p>
                     </div>
                 ))}

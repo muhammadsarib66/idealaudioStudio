@@ -10,6 +10,7 @@ export default {
         extraBold : 900
       },
       colors: {
+        Primary :"#8030D0",
         primary: "#007500", //green 
         onPrimary: "#FFFDEE", // white
         secondary: "#343337", // black

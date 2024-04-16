@@ -21,7 +21,7 @@ function Fade() {
     
   };
   return (
-    <section className="text-onPrimary relative h-screen ">
+    <section id='home' className="text-onPrimary relative h-screen ">
 
     <div className="  relative h-screen">
         <div className='absolute flex justify-center h-full w-full items-center  z-10 '>

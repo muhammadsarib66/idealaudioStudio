@@ -24,7 +24,7 @@ const AboutUs = () => {
         className=" grid py-20 h-[100px]] md:grid-cols-2  gap-8   w-full "
       >
         <div className=" text-start md:pl-24 xl:pl-40 aboutDivCover col-span-1 flex justify-center  gap-4  flex-col ">
-          <h1 className="text-4xl font-bold">Welcome to Ideal Audio</h1>
+          <h1 className=" text-3xl  md:text-5xl font-bold">Welcome to Ideal Audio</h1>
           <p className=" md:w-[80%] leading-7">
             The Ideal Audio is the brainchild of musicians who understand that
             the best art comesfrom the best environment
@@ -99,12 +99,12 @@ const AboutUs = () => {
           </p>
         </div>
 
-        <div className="flex flex-col  text-center md:text-start mt-2 justify-center items-center gap-1">
-          <div className=" flex items-center justify-center gap-2 md:gap-4 text-base md:text-xl font-bold w-fit md:w-[300px]  md:h-16 rounded-full px-8 py-4 cursor-pointer bg-onPrimary hover:text-onPrimary hover:bg-gradient-to-r hover:from-[#9023B5] hover:to-[#DE5235] text-secondary">
+        <div className="flex flex-col  text-center md:text-start mt-2 justify-center items-center gap-3">
+          <div className=" shadow-md shadow-onPrimary flex items-center justify-center gap-2 md:gap-4 text-base md:text-xl font-bold w-fit md:w-[300px]  md:h-16 rounded-full px-8 py-4 cursor-pointer bg-onPrimary hover:text-onPrimary hover:bg-gradient-to-r hover:from-[#9023B5] hover:to-[#DE5235] text-secondary">
             <i className="fa-solid fa-microphone text-orange-600"></i> Book a
             Session
           </div>
-          <p className="  text-gray-400 ">
+          <p className="  text-gray-400 text-sm ">
             And get a one recording hour for{" "}
             <span className="text-orange-600">FREE* </span>
           </p>
