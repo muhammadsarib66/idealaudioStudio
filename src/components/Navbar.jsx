@@ -1,25 +1,32 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import logo from '../assets/logoIdeal.svg'
 import Button from './Button'
 // import { NavLink } from 'react-router-dom'
 
 const Navbar = () => {
   const [isOpen , setIsOpen] = useState(false)
-  const NavTab = [{title: "home", link:'#home'}, {title: "about us", link:'#aboutus'} , {title: "services", link:'#services'}]
+  const [sticky, setSticky] = useState(false);
+  const NavTab = [{title: "home", link:'#home'}, {title: "about us", link:'#aboutus'} , {title: "services", link:'#services'},{title: "portfolio", link:'#portfolio'}]
   
   const HandleOpen = () => {
     console.log('click')
     setIsOpen(!isOpen)
     console.log(isOpen)
   }  
+
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      window.scrollY > 0 ? setSticky(true) : setSticky(false);
+    });
+  }, []);
   return (
     <>
-    <section className="hidden  md:flex items-center justify-between position fixed z-20 py-2 px-8   backdrop-blur-lg w-full   "
+    <section className={` hidden  md:flex items-center justify-between position fixed z-20 py-2 px-8 ${sticky ?"text-black":"text-white"}   backdrop-blur-lg w-full`}
     >
       <div>
         <img src={logo} className='w-24 ' alt="logo" />
       </div>
-      <div className='flex gap-8 text-onPrimary font-semibold   capitalize'>
+      <div className='flex gap-8  font-semibold   capitalize'>
           {
             NavTab.map((item,ind )=>(
               <p key={ind}  className='hover:text-primary   cursor-pointer' >

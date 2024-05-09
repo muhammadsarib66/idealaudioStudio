@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 
 import Box from '@mui/material/Box';
-import Button from '@mui/material/Button';
 import Modal from '@mui/material/Modal';
 import ReactPlayer from "react-player";
 
@@ -29,8 +28,8 @@ export default function VideoModal() {
     }
   }, []);
   return (
-    <div><div className="absolute   top-0 flex items-center justify-center h-full w-full ">
-    {/* <div className="bg-primary  rounded-full p-2"> */}
+    <div>
+      <div className="absolute   top-0 flex items-center justify-center h-full w-full ">
       <div  onClick={handleOpen} className=" cursor-pointer rounded-full bg-onPrimary h-20 w-20 flex items-center justify-center">
         <i className=" relative flex items-center justify-center p-2 h-20 w-20  text-primary fa-solid fa-play text-2xl">
           <div className="  animate-ping bg-onPrimary  absolute h-14 w-14 rounded-full"></div>

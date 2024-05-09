@@ -2,7 +2,7 @@ import record from "../assets/icons/record.png";
 import mixture from "../assets/icons/mixture.png";
 import audioEdit from "../assets/icons/audioEdit.png";
 import mic from "../assets/icons/mic.png";
-import trackSoung from "../assets/icons/trackSoung.png"
+import trackSoung from "../assets/icons/trackSoung.png";
 import mobileEdit from "../assets/icons/mobileEdit.png";
 
 const Services = () => {
@@ -66,12 +66,14 @@ const Services = () => {
           Esse, vero. Soluta, exercitationem adipisci.
         </p>
       </div>
-      <div className="grid  grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4  place-items-center md:gap-6 mx-4 md:mx-32 my-20">
+      <div
+        data-aos="fade-right"
+        className="grid  grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4  place-items-center md:gap-6 mx-4 md:mx-32 my-20"
+      >
         {servicesTab?.map((item, ind) => (
           <div
-            data-aos="fade-right"
             key={ind}
-            className="flex gap-4 hover:shadow-lg shadow-md rounded-md hover:shadow-Primary p-3 duration-200 col-span-1 w-[80%]"
+            className="flex gap-4 hover:shadow-lg shadow-lg  rounded-md hover:shadow-gray-600 p-3 cursor-pointer hover:scale-110 transition duration-500  ease-in-out col-span-1 w-[80%]"
           >
             <div className="w-40 h-40">
               <img
@@ -81,7 +83,10 @@ const Services = () => {
               />
             </div>
             <div className="flex flex-col gap-4">
-              <h1 className="text-xl md:text-2xl font-semibold"> {item.title} </h1>
+              <h1 className="text-xl md:text-2xl font-semibold">
+                {" "}
+                {item.title}{" "}
+              </h1>
               <p className="text-gray-500 text-sm">{item.description}</p>
               <p className="flex cursor-pointer items-center gap-3 text-Primary font-semibold">
                 {" "}

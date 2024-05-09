@@ -2,7 +2,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap'); */
 
 /* @font-face {
   font-family: 'HelveticaNeue';
@@ -10,61 +10,46 @@
 } */
 
 html {
-    @apply  scroll-smooth
+  @apply scroll-smooth;
+}
+
+@layer base {
+  .scroll-smooth {
+    scroll-behavior: smooth;
   }
-  
-  
-  @layer base {
-    .scroll-smooth {
-      scroll-behavior: smooth;
-    }
-  }
-  
-  ::-webkit-scrollbar {
-    width: 15px;
-  }
-  
-  ::-webkit-scrollbar-track {
-    background-color: transparent;
-  }
-  
-  ::-webkit-scrollbar-thumb {
-    background-color: #d6dee1;
-    border-radius: 20px;
-    border: 6px solid transparent;
-    background-clip: content-box;
-  }
-  
-  ::-webkit-scrollbar-thumb:hover {
-    background-color: #a8bbbf;
-  }
-.Slider{
-    width: 100%;
+}
+
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #d6dee1;
+  border-radius: 20px;
+  border: 6px solid transparent;
+  background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #a8bbbf;
+}
+.Slider {
+  width: 100%;
 }
 body {
   font-family: "Bebas Neue", sans-serif;
-  }
-
-.AboutImg{
-    background: url('./assets/image1.png');
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-        height: 500px;
-            /* height: 20px; */
-    width: auto;
-
-}
-.aboutDivCover{
-    background: url("./assets//blob.svg");
-    background-repeat: no-repeat;
-    background-size: 850px 850px;    
-    background-position: center;
-
 }
 
-@media only screen and (max-width: 767px) {
-    .aboutDivCover{
-        background-size: 500px 500px;
-    }
+.AboutImg {
+  background: url("./assets/image1.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  height: 500px;
+  /* height: 20px; */
+  width: auto;
 }
