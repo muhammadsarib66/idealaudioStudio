@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 import { useState } from "react";
 import WavesurferPlayer from "@wavesurfer/react";
+
 import Box from "@mui/material/Box";
 import Modal from "@mui/material/Modal";
 
@@ -26,6 +27,7 @@ export default function SingerModal({ user, setOpen, open }) {
   const onPlayPause = () => {
     wavesurfer && wavesurfer.playPause();
   };
+  console.log(WavesurferPlayer)
 
   return (
     <Modal
@@ -37,7 +39,7 @@ export default function SingerModal({ user, setOpen, open }) {
     >
       <Box sx={style}>
         <div className=" relative ">
-          <div className=" w-[250px] h-[300px] md:w-[500px] md:h-[500px]">
+          <div className=" w-[350px] h-[400px] md:w-[500px] md:h-[500px]">
             <img
               src={user?.img}
               alt="singer"
@@ -52,10 +54,10 @@ export default function SingerModal({ user, setOpen, open }) {
                     {user?.city}
                   </p>
                 </div>
-              <i onClick={()=>handleClose()} className="cursor-pointer  md:text-2xl fa-solid fa-xmark"></i>
+              <i onClick={()=>handleClose} className="cursor-pointer  md:text-2xl fa-solid fa-xmark"></i>
             </div>
             <div className="relative ">
-              <div className=" justify-center  flex gap-4 items-end h-[200px] md:h-[390px]">
+              <div className=" justify-center  flex gap-4 items-end h-[300px] md:h-[390px]">
                 <div
                   className=" w-8 h-8  md:h-12 md:w-12 bg-purple-500 border-white rounded-full border-2 md:border-4 flex items-center justify-center text-white  md:text-lg"
                   onClick={onPlayPause}
@@ -66,7 +68,7 @@ export default function SingerModal({ user, setOpen, open }) {
                     <i className="fa-solid fa-play"></i>
                   )}
                 </div>
-                {wavesurfer ? (
+                
                   <div className="w-[80%]">
                     <WavesurferPlayer
                       height={40}
@@ -79,9 +81,7 @@ export default function SingerModal({ user, setOpen, open }) {
                       dragToSeek={2}
                     />
                   </div>
-                ) : (
-                  "sdadasd"
-                )}
+                
               </div>
             </div>
           </div>
