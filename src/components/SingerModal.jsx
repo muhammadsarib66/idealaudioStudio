@@ -54,7 +54,7 @@ export default function SingerModal({ user, setOpen, open }) {
                     {user?.city}
                   </p>
                 </div>
-              <i onClick={()=>handleClose} className="cursor-pointer  md:text-2xl fa-solid fa-xmark"></i>
+              <i onClick={()=>handleClose()} className="cursor-pointer  md:text-2xl fa-solid fa-xmark"></i>
             </div>
             <div className="relative ">
               <div className=" justify-center  flex gap-4 items-end h-[300px] md:h-[390px]">
