@@ -27,7 +27,6 @@ export default function SingerModal({ user, setOpen, open }) {
   const onPlayPause = () => {
     wavesurfer && wavesurfer.playPause();
   };
-  console.log(WavesurferPlayer)
 
   return (
     <Modal

@@ -31,7 +31,7 @@ const AudioProjects = () => {
     slidesToShow: 3,
     speed: 500,
     autoplay: true,
-    autoplaySpeed: 1000,
+    autoplaySpeed: 2000,
     adaptiveHeight: true,
     arrow: true,
     pauseOnHover : false ,
@@ -76,7 +76,7 @@ const handleViewSinger = (item) => {
   return (
     <section className="flex flex-col justify-center">
 
-      <div className=" py-10">
+      <div className=" md:py-10">
         <div className="w-full flex justify-center overflow-hidden ">
           {/* <Button variant="contained" className="">prev</Button> */}
           <Slider style={{width: '80%', border: 'none'}} className="sliderDiv" {...settings}>
@@ -84,11 +84,11 @@ const handleViewSinger = (item) => {
               return (
               <div  key={ind} className=" py-10">
 
-                <div onClick={()=>handleViewSinger(item)} className=" cursor-pointer  border-none  md:h-[400px] relative max-w-[95%]  md:min-w-[95%] md:max-w-[95%] " >
+                <div onClick={()=>handleViewSinger(item)} className="  cursor-pointer  border-none  h-[300px] md:h-[400px] relative max-w-[95%]  md:min-w-[95%] md:max-w-[95%] " >
                   <img
                     src={item?.img}
                     alt="singer"
-                    className="  h-[200px] md:h-full w-full object-cover"
+                    className="  h-full w-full object-cover"
                   />
                 </div>
                   <div className=" flex flex-col items-center justify-center   w-full h-20 ">

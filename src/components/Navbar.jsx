@@ -54,7 +54,7 @@ const Navbar = () => {
             <i  className="text-white text-4xl  fa-solid fa-bars"></i>
               </div>
           </div>
-             <div className={`${isOpen ? "top-0 duration-300" : "top-[-1000%] duration-1000"} pt-8 absolute p-4 flex justify-between  z-20 w-full bg-white h-auto`}>
+             <div className={`${isOpen ? "top-0 duration-300" : "top-[-1000%] duration-1000"} pt-8 fixed p-4 flex justify-between  z-20 w-full bg-white h-auto`}>
                 <div className='flex gap-6 flex-col '>
 
                 {NavTab.map((item,index)=>(
